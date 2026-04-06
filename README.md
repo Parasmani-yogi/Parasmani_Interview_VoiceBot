@@ -38,48 +38,36 @@ This project allows users to:
 
 ---
 
-## 🏗️ Project Structure
 
-Parasmani_Interview_VoiceBot/
-│
-├── frontend.py          # Streamlit UI (Voice + Chat)
-├── ai_agent.py          # Core AI logic (RAG + Agent)
-├── data/
-│   ├── paras_profile.pdf
-│   └── 100x_profile.pdf
-├── .env                 # API keys
-└── README.md
-
----
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone Repository
-git clone https://github.com/your-username/Parasmani_Interview_VoiceBot.git  
-cd Parasmani_Interview_VoiceBot
-
-### 2️⃣ Create Virtual Environment
+### 1 Create Virtual Environment
+```bash
 python -m venv venv  
 venv\Scripts\activate   (Windows)
+```
 
-### 3️⃣ Install Dependencies
+### 2 Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## 🔑 Environment Variables
 
 Create a `.env` file in root:
-
+```
 OPENAI_API_KEY=your_openai_api_key  
 TAVILY_API_KEY=your_tavily_api_key  
-
+```
 ---
 
 ## ▶️ Run the App
 
+```bash
 streamlit run frontend.py
-
+```
 ---
 
 ## 🧠 How It Works
