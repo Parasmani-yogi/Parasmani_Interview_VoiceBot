@@ -25,7 +25,7 @@ This project allows users to:
 - Uses **LangChain + OpenAI GPT**
 - Retrieval from:
   - Personal profile (`paras_profile.pdf`)
-  - Company profile (`100x_profile.pdf`)
+  
 - Context-aware responses using vector database (FAISS)
 
 ### 🌐 Web Search (Conditional)
