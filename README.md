@@ -1,116 +1,164 @@
-# Parasmani Interview VoiceBot
+# 🎤 Parasmani Interview VoiceBot
 
-This is a small project I built to experiment with voice-based AI interaction.
+An AI-powered **Voice + Chat Assistant** built using **Streamlit, OpenAI, and LangChain**, designed to simulate a smart, human-like conversational agent.
 
-Instead of just typing into a chatbot, I wanted something where I can speak, get a response, and even hear it back. It also tries to give better answers by using some custom data instead of replying generically.
-
----
-
-## What this project does
-
-- You can talk to the system using your voice  
-- Or switch to normal chat mode and type  
-- It converts speech to text, processes it, and gives a response  
-- The response is also converted back into audio  
-- It can use some predefined data (PDFs) to answer more accurately  
-- For current topics, it can fetch results from the web  
+This project allows users to:
+- 🎙️ Speak directly to the AI (Voice Mode)
+- 💬 Chat via text (Chat Mode)
+- 🧠 Get intelligent, context-aware responses using RAG (Retrieval-Augmented Generation)
+- 🔊 Hear responses in natural AI-generated voice
 
 ---
 
-## How it basically works
+## 🚀 Features
 
-When you give input:
+### 🎤 Voice Mode
+- Record voice input directly in the browser
+- Speech-to-text using OpenAI Whisper
+- AI response converted back to speech (Text-to-Speech)
 
-- If it's voice → converted to text  
-- Then the system checks what the question is about  
-- Based on that, it may use:
-  - personal data
-  - company-related data
-  - or web search  
-- Then it generates a short answer  
-- Finally, it plays the response as audio  
+### 💬 Chat Mode
+- Simple text-based interaction
+- Same intelligent backend processing
 
-I tried to keep responses short and more direct instead of long explanations.
+### 🧠 Smart AI Brain
+- Uses **LangChain + OpenAI GPT**
+- Retrieval from:
+  - Personal profile (`paras_profile.pdf`)
+  - Company profile (`100x_profile.pdf`)
+- Context-aware responses using vector database (FAISS)
+
+### 🌐 Web Search (Conditional)
+- Uses Tavily Search API
+- Triggered only for:
+  - Latest trends
+  - Market updates
+  - Current events
+
+### 🧾 Memory
+- Maintains short conversation history
+- Improves contextual continuity
 
 ---
 
-## Project structure
+## 🏗️ Project Structure
 
 Parasmani_Interview_VoiceBot/
-
-- `frontend.py` → Streamlit UI (handles voice + chat)
-- `ai_agent.py` → main logic (RAG, routing, tools)
-- `data/`
-  - `paras_profile.pdf`
-  - `100x_profile.pdf`
-- `.env` → API keys
+│
+├── frontend.py          # Streamlit UI (Voice + Chat)
+├── ai_agent.py          # Core AI logic (RAG + Agent)
+├── data/
+│   ├── paras_profile.pdf
+│   └── 100x_profile.pdf
+├── .env                 # API keys
+└── README.md
 
 ---
 
-## Setup steps
+## ⚙️ Installation
 
-Clone the repo:
-
+### 1️⃣ Clone Repository
 git clone https://github.com/your-username/Parasmani_Interview_VoiceBot.git  
-cd Parasmani_Interview_VoiceBot  
+cd Parasmani_Interview_VoiceBot
 
-Create virtual environment:
-
+### 2️⃣ Create Virtual Environment
 python -m venv venv  
-venv\Scripts\activate  
+venv\Scripts\activate   (Windows)
 
-Install requirements:
-
-pip install -r requirements.txt  
+### 3️⃣ Install Dependencies
+pip install -r requirements.txt
 
 ---
 
-## Add API keys
+## 🔑 Environment Variables
 
-Create a `.env` file:
+Create a `.env` file in root:
 
 OPENAI_API_KEY=your_openai_api_key  
 TAVILY_API_KEY=your_tavily_api_key  
 
 ---
 
-## Run the app
+## ▶️ Run the App
 
-streamlit run frontend.py  
-
----
-
-## Tech used
-
-- Streamlit  
-- OpenAI APIs (GPT, Whisper, TTS)  
-- LangChain  
-- FAISS  
-- Tavily  
+streamlit run frontend.py
 
 ---
 
-## Why I made this
+## 🧠 How It Works
 
-Mostly to understand how different components work together:
-- speech input/output  
-- LLM responses  
-- retrieval-based answers  
-- simple agent logic  
+1. **User Input**
+   - Voice → Whisper → Text
+   - OR direct text input
 
-Also wanted something a bit more interactive than a normal chatbot.
+2. **AI Processing**
+   - Query routing:
+     - About Paras → Personal PDF
+     - About Company → Company PDF
+     - Current topics → Web search
+   - Context injected into LLM
+
+3. **Response Generation**
+   - GPT model generates short, human-like answers
+
+4. **Output**
+   - Display text
+   - Convert to speech (TTS)
 
 ---
 
-## Things I might improve later
+## 🎯 Key Technologies
 
-- cleaner UI (right now it's basic)
-- storing chat history properly
-- better response control
-- maybe deploy it online
+- **Frontend:** Streamlit  
+- **LLM:** OpenAI GPT (gpt-4o-mini)  
+- **Speech-to-Text:** Whisper  
+- **Text-to-Speech:** OpenAI TTS  
+- **Framework:** LangChain + LangGraph  
+- **Vector DB:** FAISS  
+- **Search Tool:** Tavily API  
 
 ---
 
-## Author
+## 🧩 Core Logic (AI Agent)
 
-Parasmani Yogi
+- Conditional RAG (Retrieval-Augmented Generation)  
+- Smart query routing  
+- Minimal memory for efficiency  
+- Tool-based reasoning (ReAct Agent)  
+
+---
+
+## 📌 Use Cases
+
+- Interview preparation assistant  
+- Personal AI portfolio bot  
+- Voice-based AI demo project  
+- Smart resume chatbot  
+- AI product prototype  
+
+---
+
+## ⚡ Future Improvements
+
+- Multi-language support  
+- Persistent chat history (database)  
+- UI enhancements (chat bubbles, animations)  
+- Deployment (Streamlit Cloud / AWS)  
+- Real-time streaming responses  
+
+---
+
+## 👤 Author
+
+**Parasmani Yogi**  
+
+- AI Engineer | Deep Learning | NLP | Computer Vision  
+- Focused on building real-world AI systems  
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub and share!
+
+---
