@@ -30,10 +30,7 @@ This project allows users to:
 
 ### 🌐 Web Search (Conditional)
 - Uses Tavily Search API
-- Triggered only for:
-  - Latest trends
-  - Market updates
-  - Current events
+
 
 ### 🧾 Memory
 - Maintains short conversation history
