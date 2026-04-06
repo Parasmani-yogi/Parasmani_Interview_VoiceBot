@@ -120,12 +120,3 @@ streamlit run frontend.py
 - Smart resume chatbot  
 - AI product prototype  
 
-
-
-
-
-## ⭐ If you like this project
-
-Give it a ⭐ on GitHub and share!
-
----
