@@ -79,7 +79,6 @@ streamlit run frontend.py
 2. **AI Processing**
    - Query routing:
      - About Paras → Personal PDF
-     - About Company → Company PDF
      - Current topics → Web search
    - Context injected into LLM
 
@@ -121,26 +120,9 @@ streamlit run frontend.py
 - Smart resume chatbot  
 - AI product prototype  
 
----
 
-## ⚡ Future Improvements
 
-- Multi-language support  
-- Persistent chat history (database)  
-- UI enhancements (chat bubbles, animations)  
-- Deployment (Streamlit Cloud / AWS)  
-- Real-time streaming responses  
 
----
-
-## 👤 Author
-
-**Parasmani Yogi**  
-
-- AI Engineer | Deep Learning | NLP | Computer Vision  
-- Focused on building real-world AI systems  
-
----
 
 ## ⭐ If you like this project
 
