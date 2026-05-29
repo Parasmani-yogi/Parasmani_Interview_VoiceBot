@@ -58,7 +58,7 @@ if not mode:
 
             with client.audio.speech.with_streaming_response.create(
                 model="gpt-4o-mini-tts",
-                voice="alloy",
+                voice="nova",
                 input=ai_text,
             ) as response:
                 response.stream_to_file(speech_path)
@@ -83,7 +83,7 @@ else:
 
         with client.audio.speech.with_streaming_response.create(
             model="gpt-4o-mini-tts",
-            voice="alloy",
+            voice="nova",
             input=ai_text,
         ) as response:
             response.stream_to_file(speech_path)
